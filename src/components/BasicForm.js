@@ -35,6 +35,9 @@ const BasicForm = (props) => {
 
   const formSubmitHandler = (event) => {
     event.preventDefault();
+    if(!formIsValid) {
+      return;
+    }
     console.log(nameInputValue);
     console.log(lastnameInputValue);
     console.log(emailInputValue);
